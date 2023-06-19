@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalogue</title>
+
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Product Catalogue</h1>
+
+        <section id="links">
+            <ul>
+                <li><a href="#Electronics">Electronics</a></li>
+                <li><a href="#Clothing">Clothing</a></li>
+                <li><a href="#Home">Home</a></li>
+            </ul>
+        </section>
+
+        <div id="Electronics">
+            <h2 class="text-center">Electronics</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <img src="laptop.jpg" class="card-img-top" alt="Laptop">
+                        <div class="card-body">
+                            <h5 class="card-title">Laptop</h5>
+                            <p class="card-text">High-performance laptop with the latest processor and ample storage</p>
+                            <p class="card-text"><b>Price:</b> $999.99</p>
+                            <p class="card-text"><b>Availability:</b> In stock</p>
+                            <a href="#" class="btn btn-primary addToCart" data-product="Laptop">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <img src="smartphone.jpg" class="card-img-top" alt="Smartphone">
+                        <div class="card-body">
+                            <h5 class="card-title">Smartphone</h5>
+                            <p class="card-text">Smartphone with the latest features and stylish design</p>
+                            <p class="card-text"><b>Price:</b> $99.99</p>
+                            <p class="card-text"><b>Availability:</b> In stock</p>
+                            <a href="#" class="btn btn-primary addToCart" data-product="Smartphone">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Clothing">
+            <h2 class="text-center">Clothing</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <img src="jeans.jpg" class="card-img-top" alt="Jeans">
+                        <div class="card-body">
+                            <h5 class="card-title">Jeans</h5>
+                            <p class="card-text">Comfortable jeans for everyday wear</p>
+                            <p class="card-text"><b>Price:</b> $49.99</p>
+                            <p class="card-text"><b>Availability:</b> In stock</p>
+                            <a href="#" class="btn btn-primary addToCart" data-product="Jeans">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <img src="tshirt.jpg" class="card-img-top" alt="T-shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">T-shirt</h5>
+                            <p class="card-text">Casual and comfortable t-shirts</p>
+                            <p class="card-text"><b>Price:</b> $29.99</p>
+                            <p class="card-text"><b>Availability:</b> In stock</p>
+                            <a href="#" class="btn btn-primary addToCart" data-product="T-shirt">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Home">
+            <h2 class="text-center">Home Decor</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <img src="lamp.jpg" class="card-img-top" alt="Table Lamp">
+                        <div class="card-body">
+                            <h5 class="card-title">Table Lamp</h5>
+                            <p class="card-text">Modern and stylish table lamp to enhance your home decor</p>
+                            <p class="card-text"><b>Price:</b> $19.99</p>
+                            <p class="card-text"><b>Availability:</b> In stock</p>
+                            <a href="#" class="btn btn-primary addToCart" data-product="Table Lamp">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <img src="pillow.jpg" class="card-img-top" alt="Throw Pillows">
+                        <div class="card-body">
+                            <h5 class="card-title">Throw Pillows</h5>
+                            <p class="card-text">Comfy and soft pillows for your living room</p>
+                            <p class="card-text"><b>Price:</b> $9.99</p>
+                            <p class="card-text"><b>Availability:</b> In stock</p>
+                            <a href="#" class="btn btn-primary addToCart" data-product="Throw Pillows">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="cart">
+            <h2 class="text-center">Cart</h2>
+            <ul id="cartItems"></ul>
+            <p id="totalPrice"><b>Total Price: $0.00</b></p>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and custom JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Add event listener to "Add to Cart" buttons
+        const addToCartButtons = document.querySelectorAll('.addToCart');
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', addToCart);
+        });
+
+        // Function to handle adding items to the cart
+        function addToCart(event) {
+            event.preventDefault();
+
+            const product = event.target.dataset.product;
+
+            // Retrieve cart items from local storage
+            let cartItems = localStorage.getItem('cartItems');
+            cartItems = cartItems ? JSON.parse(cartItems) : [];
+
+            // Add the selected product to the cart
+            cartItems.push(product);
+
+            // Save updated cart items to local storage
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+            // Update the cart display
+            updateCart();
+        }
+
+        // Function to update the cart display
+        function updateCart() {
+            const cartItemsElement = document.getElementById('cartItems');
+            const totalPriceElement = document.getElementById('totalPrice');
+
+            // Clear the cart display
+            cartItemsElement.innerHTML = '';
+            totalPriceElement.innerHTML = '<b>Total Price: $0.00</b>';
+
+            // Retrieve cart items from local storage
+            let cartItems = localStorage.getItem('cartItems');
+            cartItems = cartItems ? JSON.parse(cartItems) : [];
+
+            let totalPrice = 0;
+
+            // Iterate over cart items and display them
+            cartItems.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                cartItemsElement.appendChild(li);
+
+                // Calculate the total price
+                // Note: You can replace this logic with your own price calculation logic
+                totalPrice += 9.99;
+            });
+
+            // Update the total price display
+            totalPriceElement.innerHTML = `<b>Total Price: $${totalPrice.toFixed(2)}</b>`;
+        }
+
+        // Update the cart display on page load
+        updateCart();
+    </script>
+</body>
+
+</html>
