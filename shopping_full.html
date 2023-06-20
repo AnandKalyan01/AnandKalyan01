@@ -1,188 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Catalogue</title>
-
-    <!-- Add Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Document</title>
 </head>
-
 <body>
-    <div class="container">
-        <h1 class="text-center">Product Catalogue</h1>
+    <div class="core ">
+            <h1>
+                Product Catalogue
+            </h1>
+            <section id="links">
+                <ul>
+                    <li><a href="#Gadgets">Electronics</a></li>
+                    <li><a href="#Clothing">Clothing</a></li>
+                    <li><a href="#Home">Home</a></li>
+                </ul>
+            </section>
 
-        <section id="links">
-            <ul>
-                <li><a href="#Electronics">Electronics</a></li>
-                <li><a href="#Clothing">Clothing</a></li>
-                <li><a href="#Home">Home</a></li>
-            </ul>
-        </section>
-
-        <div id="Electronics">
-            <h2 class="text-center">Electronics</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <img src="laptop.jpg" class="card-img-top" alt="Laptop">
-                        <div class="card-body">
-                            <h5 class="card-title">Laptop</h5>
-                            <p class="card-text">High-performance laptop with the latest processor and ample storage</p>
-                            <p class="card-text"><b>Price:</b> $999.99</p>
-                            <p class="card-text"><b>Availability:</b> In stock</p>
-                            <a href="#" class="btn btn-primary addToCart" data-product="Laptop">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <img src="smartphone.jpg" class="card-img-top" alt="Smartphone">
-                        <div class="card-body">
-                            <h5 class="card-title">Smartphone</h5>
-                            <p class="card-text">Smartphone with the latest features and stylish design</p>
-                            <p class="card-text"><b>Price:</b> $99.99</p>
-                            <p class="card-text"><b>Availability:</b> In stock</p>
-                            <a href="#" class="btn btn-primary addToCart" data-product="Smartphone">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <fieldset>
+            <div id="electronics">
+                 <section id="#Gadgets">
+               <b> <big><big>Electronics</big></big></b>
+                <p id="laptop">
+                    <b><big>Laptop</big></b> <br> <br>
+                    <b>Description : </b> High Performance with latest processor and ample storage <br>
+                    <b>Price :</b>  $999.99 <br>
+                    <b>Availability :</b>  In stocks <br> <br> 
+                    <img src="laptop.jpg" height="100" width="150" > 
+                </p>
+                <a href="">View Details</a>
+                <p id="laptop_spec" >
+                    <ul>
+                    <li><b>Brand :</b> XYZ Electronics</li> 
+                    <li>
+                        <b>Screen Size :</b> 
+                        <list>
+                            <select>
+                                <option>14 inch</option>
+                                <option>15.6 inch</option>
+                                <option>17 inch</option>
+                            </select>
+                        </list>
+                    </li>
+                    <li>
+                        <b>RAM :</b>
+                        <list>
+                            <select>
+                                <option>8 GB</option>
+                                <option>12 GB</option>
+                                <option>16 GB</option>
+                            </select>
+                        </list>
+                    </li> 
+                    <li><b>Storage :</b>1 TB </li>
+                    </ul>
+                </p>
+                <p id="smartphone">
+                    <b><big>Smartphone</big></b> <br><br>
+                    <b>Description :</b> With latest features and Stylish design <br>
+                    <b>Price :</b> $99.99 <br>
+                    <b>Availability :</b> In Stocks <br>
+                    <img src="smartphone.jpg" height="100" width="100" >
+                </p>
+                <a href="">View Details</a>
+                <p id="smartphone_spec" >
+                    <ul>
+                        <li><b>Brand :</b>Samsung </li>
+                        <li><b>Screen Size :</b>6.5 inch</li>
+                        <li>
+                            <b>Ram :</b>
+                            <list>
+                                <select>
+                                    <option>4 GB</option>
+                                    <option>6 GB</option>
+                                    <option>8 GB</option>
+                                </select>
+                            </list>
+                        </li>
+                        <li>
+                            <b>Storage :</b>
+                            <list>
+                                <select>
+                                    <option>64 GB</option>
+                                    <option>128 GB</option>
+                                    <option>256 GB</option>
+                                </select>
+                            </list>
+                        </li>
+                        <li><b>Camera :</b>108 mp (main camera) + 48 mp (Secondary Camera)</li>
+                    </ul>
+                </p>
+            </section>
         </div>
-
+    </fieldset> <br>
+    <fieldset>
         <div id="Clothing">
-            <h2 class="text-center">Clothing</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <img src="jeans.jpg" class="card-img-top" alt="Jeans">
-                        <div class="card-body">
-                            <h5 class="card-title">Jeans</h5>
-                            <p class="card-text">Comfortable jeans for everyday wear</p>
-                            <p class="card-text"><b>Price:</b> $49.99</p>
-                            <p class="card-text"><b>Availability:</b> In stock</p>
-                            <a href="#" class="btn btn-primary addToCart" data-product="Jeans">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <img src="tshirt.jpg" class="card-img-top" alt="T-shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">T-shirt</h5>
-                            <p class="card-text">Casual and comfortable t-shirts</p>
-                            <p class="card-text"><b>Price:</b> $29.99</p>
-                            <p class="card-text"><b>Availability:</b> In stock</p>
-                            <a href="#" class="btn btn-primary addToCart" data-product="T-shirt">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <b><big><big>Clothing</big></big></b>
+            <p id="Jeans" >
+                <b><big>Jeans</big></b> <br> <br>
+                <b>Description : </b> Causal and comfortable jeans  <br>
+                <b>Price :</b> $9.99 <br>
+                <b>Availability :</b>  In stocks <br> <br> 
+                <img src="jeans.jpg" height="150" width="100" >  
+            </p>
+            <p id="jeans_spec" >
+                <ul>
+                <li><b>Brand :</b> Diesel</li> 
+                <li><b>Size :</b>
+                    <list>
+                        <select>
+                            <option>Small : 65 cm </option>
+                            <option>Medium : 80 cm</option>
+                            <option>Long : 90 cm</option>
+                        </select>
+                    </list>
+                </li>
+                <li><b>Material :</b> Denim Fabric</li> 
+                <li><b>Colour :</b> 
+                    <list>
+                        <select>
+                        <option>Blue</option>
+                        <option>BLack</option>
+                        <option>Grey</option>
+                        </select>
+                    </list> 
+                </li>
+                </ul>
+            </p>
+            <p id="T-Shirt " >
+                <b><big>T-shirts</big></b> <br> <br>
+                <b>Description : </b> Causal and comfortable T-Shirts  <br>
+                <b>Price :</b> $19.99 <br>
+                <b>Availability :</b>  In stocks <br> <br> 
+                <img src="tshirt.jpg" height="150" width="100" >  
+            </p>
+            <a href="">View Details</a>
+            <p id="T-shirt_detail">
+                <ul>
+                    <li>
+                        <b>Brand :</b>
+                        <list>
+                            <select>
+                                <option>Puma</option>
+                                <option>Nike</option>
+                                <option>Addidas</option>
+                                <option>Reebok</option>
+                            </select>
+                        </list>
+                    </li>
+                    <li> 
+                        <b>Size :</b>
+                        <list>
+                            <select>
+                                <option>M (38-40) inch</option>
+                                <option>L (40-42) inch</option>
+                                <option>XL(42-44) inch</option>
+                            </select>
+                        </list>
+                    </li>
+                    <li>
+                        <b>Material :</b>
+                        <list>
+                            <select>
+                                <option>Synthetic Fabric</option>
+                                <option>Cotton</option>
+                            </select>
+                        </list>
+                    </li>
+                    <li>
+                        <b>Colour :</b>
+                        <input type="color" value="Colour Picker"> 
+                    </li>
+                    <li>
+                        <b>Type : </b>
+                        <list>
+                            <select>
+                                <option>Full Sleves</option>
+                                <option>Half Sleves</option>
+                            </select>
+                        </list>
+                    </li>
+                </ul>
+            </p>
         </div>
-
+    </fieldset> <br>
+    <fieldset>
         <div id="Home">
-            <h2 class="text-center">Home Decor</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <img src="lamp.jpg" class="card-img-top" alt="Table Lamp">
-                        <div class="card-body">
-                            <h5 class="card-title">Table Lamp</h5>
-                            <p class="card-text">Modern and stylish table lamp to enhance your home decor</p>
-                            <p class="card-text"><b>Price:</b> $19.99</p>
-                            <p class="card-text"><b>Availability:</b> In stock</p>
-                            <a href="#" class="btn btn-primary addToCart" data-product="Table Lamp">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <img src="pillow.jpg" class="card-img-top" alt="Throw Pillows">
-                        <div class="card-body">
-                            <h5 class="card-title">Throw Pillows</h5>
-                            <p class="card-text">Comfy and soft pillows for your living room</p>
-                            <p class="card-text"><b>Price:</b> $9.99</p>
-                            <p class="card-text"><b>Availability:</b> In stock</p>
-                            <a href="#" class="btn btn-primary addToCart" data-product="Throw Pillows">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
+            <section id="#Decor">
+                <b> <big><big>Home-Decor</big></big></b>
+                 <p id="lamp">
+                     <b><big> Table Lamp</big></b> <br> <br>
+                     <b>Description : </b>Modern and Stylish table lamp to enchance your home decor<br>
+                     <b>Price :</b>  $9.99 <br>
+                     <b>Availability :</b>  In stocks <br> <br> 
+                     <img src="lamp.jpg" height="100" width="150" > 
+                 </p>
+                 <a href="">View Details</a>
+                 <p id="decor_detail">
+                    <ul>
+                        <li><b>Brand  :</b> WayFair</li>
+                        <li><b>Colour :</b> White</li>
+                        <li><b>Size   :</b> 12 inches</li>
+                        <li>
+                            <b>Frame Material :</b>
+                            <list>
+                                <select>
+                                    <option>Plastic</option>
+                                    <option>Metal </option>
+                                </select>
+                            </list>
+                        </li>
+                    </ul>
+                 </p>
+                 <p id="Pillows">
+                    <b><big>Throw Pillows</big></b> <br> <br>
+                    <b>Description : </b>Comfy and Soft Pillows for Living room<br>
+                    <b>Price :</b> $9.99 <br>
+                    <b>Availability :</b>  In stocks <br> <br> 
+                    <img src="pillow.jpg" height="100" width="100" > 
+
+                </p>
             </div>
-        </div>
-
-        <div id="cart">
-            <h2 class="text-center">Cart</h2>
-            <ul id="cartItems"></ul>
-            <p id="totalPrice"><b>Total Price: $0.00</b></p>
-        </div>
+        </fieldset>
     </div>
-
-    <!-- Add Bootstrap JS and custom JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        // Add event listener to "Add to Cart" buttons
-        const addToCartButtons = document.querySelectorAll('.addToCart');
-        addToCartButtons.forEach(button => {
-            button.addEventListener('click', addToCart);
-        });
-
-        // Function to handle adding items to the cart
-        function addToCart(event) {
-            event.preventDefault();
-
-            const product = event.target.dataset.product;
-
-            // Retrieve cart items from local storage
-            let cartItems = localStorage.getItem('cartItems');
-            cartItems = cartItems ? JSON.parse(cartItems) : [];
-
-            // Add the selected product to the cart
-            cartItems.push(product);
-
-            // Save updated cart items to local storage
-            localStorage.setItem('cartItems', JSON.stringify(cartItems));
-
-            // Update the cart display
-            updateCart();
-        }
-
-        // Function to update the cart display
-        function updateCart() {
-            const cartItemsElement = document.getElementById('cartItems');
-            const totalPriceElement = document.getElementById('totalPrice');
-
-            // Clear the cart display
-            cartItemsElement.innerHTML = '';
-            totalPriceElement.innerHTML = '<b>Total Price: $0.00</b>';
-
-            // Retrieve cart items from local storage
-            let cartItems = localStorage.getItem('cartItems');
-            cartItems = cartItems ? JSON.parse(cartItems) : [];
-
-            let totalPrice = 0;
-
-            // Iterate over cart items and display them
-            cartItems.forEach(item => {
-                const li = document.createElement('li');
-                li.textContent = item;
-                cartItemsElement.appendChild(li);
-
-                // Calculate the total price
-                // Note: You can replace this logic with your own price calculation logic
-                totalPrice += 9.99;
-            });
-
-            // Update the total price display
-            totalPriceElement.innerHTML = `<b>Total Price: $${totalPrice.toFixed(2)}</b>`;
-        }
-
-        // Update the cart display on page load
-        updateCart();
-    </script>
 </body>
-
 </html>
