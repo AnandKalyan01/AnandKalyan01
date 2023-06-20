@@ -1,0 +1,119 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0;
+  color: black ;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: 24px;
+  margin: 0;
+  color: #555;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 0;
+  color: #777;
+}
+
+#one {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#two,
+#three,
+#FAQ {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#links p {
+  margin: 5px 0;
+}
+
+#about table {
+  margin-top: 10px;
+}
+
+#about td {
+  vertical-align: top;
+  padding-left: 10px;
+}
+
+#education ul,
+#skills ul,
+#Achievements ul,
+#Projects ul {
+  padding-left: 20px;
+}
+
+#education li::before,
+#skills li::before,
+#Achievements li::before,
+#Projects li::before {
+  content: "•";
+  color: #333;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+#hobbies p {
+  margin-bottom: 0;
+}
+
+details {
+  margin-top: 10px;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #555;
+}
+
+details summary:hover {
+  color: #ff5500;
+}
+
+details p {
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+footer {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: #555;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ff5500;
+}
